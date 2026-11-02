@@ -1,0 +1,5 @@
+stenosis_diameter_percent,minimum_diameter_mm,maximum_diameter_mm,minimum_area_reduction_percent,vessel_length_mm,mesh_points,mesh_faces,open_edges
+0,4.0,4.0,0.0,120.0,15458,30912,0
+30,2.8,4.0,51.0,120.0,15458,30912,0
+50,2.0,4.0,75.0,120.0,15458,30912,0
+70,1.2,4.0,91.0,120.0,15458,30912,0

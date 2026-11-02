@@ -1,0 +1,80 @@
+# ==========================================
+# HemoDyn-AI .gitignore
+# ==========================================
+
+# Operating System & IDE metadata
+.DS_Store
+**/.DS_Store
+.qodo/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python virtual environment & package caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# SimVascular / svSolver raw binary checkpoint files
+# These .bin files are transient solver restart states (>1 GB) not required
+# for reproducing analyses, surrogate ML models, or figures.
+*.bin
+
+# Temporary backup, pilot, and test directories
+**/1-procs_backup*/
+**/1-procs_previous_test*/
+**/1-procs_gmres*/
+**/1-procs_ns20*/
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/pilot_*/
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/checkpoints/
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_0*/
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_1*/
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_2*/
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_3*/
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_4*/
+
+# Unneeded coarse and ultrafine convergence volume runs (summary in healthy_three_mesh_results.csv)
+HemoDyn_CFD/MultiPhysics/hemodyn_healthy_steady/1-procs/
+HemoDyn_CFD/MultiPhysics/hemodyn_healthy_steady_ultrafine/1-procs/
+
+# Heavy 3D tetrahedral volume meshes (keep surface boundaries, walls, caps, and exterior surfaces)
+# Volume meshes are reproducible from geometry and not required for post-processing or ML
+**/*.mesh.vtu
+HemoDyn_CFD/Meshes/*.vtu
+HemoDyn_CFD/Meshes/*.msh
+
+# Intermediate solver timesteps (keep converged step 500 / step 600 solutions and histor.dat)
+HemoDyn_CFD/MultiPhysics/*/1-procs/*_050.vtu
+HemoDyn_CFD/MultiPhysics/*/1-procs/*_100.vtu
+HemoDyn_CFD/MultiPhysics/*/1-procs/*_150.vtu
+HemoDyn_CFD/MultiPhysics/*/1-procs/*_200.vtu
+HemoDyn_CFD/MultiPhysics/*/1-procs/*_250.vtu
+HemoDyn_CFD/MultiPhysics/*/1-procs/*_300.vtu
+HemoDyn_CFD/MultiPhysics/*/1-procs/*_350.vtu
+HemoDyn_CFD/MultiPhysics/*/1-procs/*_400.vtu
+HemoDyn_CFD/MultiPhysics/*/1-procs/*_450.vtu
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_510.vtu
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_520.vtu
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_530.vtu
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_540.vtu
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_550.vtu
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_560.vtu
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_570.vtu
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_580.vtu
+HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_590.vtu
+
+# Explicitly ensure final converged solutions & histories are preserved
+!HemoDyn_CFD/MultiPhysics/*/1-procs/*_500.vtu
+!HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_600.vtu
+!HemoDyn_CFD/MultiPhysics/**/histor.dat

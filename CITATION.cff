@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software, datasets, or surrogate models in your research, please cite it as below."
+title: "HemoDyn-AI: Physics-Guided Machine Learning and CFD for Arterial Stenosis Hemodynamics"
+version: 1.0.0
+date-released: 2026-11-01
+url: "https://github.com/z5rcnws7bz-eng/HemoDyn-Ai"
+authors:
+  - family-names: "Ron"
+    given-names: "Jace"
+    affiliation: "Temple University"
+    orcid: ""
+keywords:
+  - "hemodynamics"
+  - "computational-fluid-dynamics"
+  - "physics-guided-machine-learning"
+  - "arterial-stenosis"
+  - "simvascular"
+  - "surrogate-modeling"
+  - "wall-shear-stress"
+  - "scientific-machine-learning"
+license: "MIT"
+abstract: >-
+  HemoDyn-AI is a reproducible computational hemodynamics and physics-guided
+  machine learning framework for evaluating arterial blood flow in healthy and
+  stenotic arteries (0%, 30%, 50%, and 70% diameter constrictions). By coupling
+  Navier-Stokes solutions from SimVascular svSolver with gradient-boosted
+  residual surrogate models, HemoDyn-AI achieves fast, highly accurate
+  approximations of 3D velocity fields, pressure drops, and wall shear stress (WSS)
+  with spatial and cross-geometry holdout validation.
+

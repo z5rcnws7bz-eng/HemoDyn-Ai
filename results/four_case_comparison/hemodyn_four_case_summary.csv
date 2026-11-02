@@ -1,0 +1,5 @@
+geometry,severity_pct,peak_velocity_mm_s,pressure_drop_pa,mean_wall_wss_pa,maximum_wss_pa,throat_mean_wss_pa,status
+Healthy,0,204.038164,86.215366,0.639995,0.678857,0.640284,Reference CFD result
+30% stenosis,30,374.622351,109.945786,0.689829,2.246819,1.587502,Completed CFD
+50% stenosis,50,786.769026,211.938852,0.72192,5.734804,3.123849,Completed CFD
+70% stenosis,70,2118.996417,1176.12038,1.083375,27.678234,9.561801,Preliminary; downstream non-steady at NS600

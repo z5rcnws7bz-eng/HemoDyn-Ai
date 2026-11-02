@@ -1,0 +1,4 @@
+edge_size_mm,elements,cfd_gradient_Pa_per_mm,theory_gradient_Pa_per_mm
+0.6,102896,0.787209,0.711671
+0.45,246190,0.721649,0.699932
+0.35,542825,0.706051,0.696923
