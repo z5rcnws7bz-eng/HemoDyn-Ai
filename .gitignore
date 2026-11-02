@@ -59,6 +59,7 @@ data/*-mesh-complete/
 data/stenosis_geometry/
 data/*.facenames
 HemoDyn_CFD/**/figures/
+HemoDyn_CFD/Models/*parametric*.vtp
 
 # SimVascular large finite element volume solutions (*.vtu, up to 42MB)
 # Complete extracted node coordinates, CFD velocities, and ML datasets are provided in results/ml/
