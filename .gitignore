@@ -54,27 +54,16 @@ HemoDyn_CFD/MultiPhysics/hemodyn_healthy_steady_ultrafine/1-procs/
 HemoDyn_CFD/Meshes/*.vtu
 HemoDyn_CFD/Meshes/*.msh
 
-# Intermediate solver timesteps (keep converged step 500 / step 600 solutions and histor.dat)
-HemoDyn_CFD/MultiPhysics/*/1-procs/*_050.vtu
-HemoDyn_CFD/MultiPhysics/*/1-procs/*_100.vtu
-HemoDyn_CFD/MultiPhysics/*/1-procs/*_150.vtu
-HemoDyn_CFD/MultiPhysics/*/1-procs/*_200.vtu
-HemoDyn_CFD/MultiPhysics/*/1-procs/*_250.vtu
-HemoDyn_CFD/MultiPhysics/*/1-procs/*_300.vtu
-HemoDyn_CFD/MultiPhysics/*/1-procs/*_350.vtu
-HemoDyn_CFD/MultiPhysics/*/1-procs/*_400.vtu
-HemoDyn_CFD/MultiPhysics/*/1-procs/*_450.vtu
-HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_510.vtu
-HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_520.vtu
-HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_530.vtu
-HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_540.vtu
-HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_550.vtu
-HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_560.vtu
-HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_570.vtu
-HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_580.vtu
-HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_590.vtu
+# Intermediate mesh generation artifacts & duplicate exports
+data/*-mesh-complete/
+data/stenosis_geometry/
+data/*.facenames
+HemoDyn_CFD/**/figures/
 
-# Explicitly ensure final converged solutions & histories are preserved
-!HemoDyn_CFD/MultiPhysics/*/1-procs/*_500.vtu
-!HemoDyn_CFD/MultiPhysics/hemodyn_stenosis_70_fine/restart_from_500_to_600/1-procs/hemodyn_70_stage90_600.vtu
+# SimVascular large finite element volume solutions (*.vtu, up to 42MB)
+# Complete extracted node coordinates, CFD velocities, and ML datasets are provided in results/ml/
+**/*.vtu
+**/*.msh
+
+# Explicitly ensure convergence histories are preserved
 !HemoDyn_CFD/MultiPhysics/**/histor.dat
