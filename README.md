@@ -12,7 +12,7 @@ By coupling high-fidelity Navier-Stokes finite element simulations from [SimVasc
 
 ---
 
-## 📌 Research Overview & Motivation
+##  Research Overview & Motivation
 
 Arterial stenosis—pathological luminal narrowing caused by atherosclerotic plaque—disrupts cardiovascular hemodynamics. Local lumen constriction accelerates blood velocity, generates steep translesional pressure gradients, sharply elevates wall shear stress (WSS), and induces flow separation with recirculation vortices downstream.
 
@@ -22,7 +22,7 @@ Although 3D computational fluid dynamics (CFD) provides golden-standard numerica
 
 ---
 
-## 🔬 Methodology & Architecture
+##  Methodology & Architecture
 
 ```mermaid
 flowchart LR
@@ -56,7 +56,7 @@ $$u_{\text{physics}}(r, z) = \frac{2 Q}{\pi R(z)^2} \max\left(1 - \frac{r^2}{R(z
 
 ---
 
-## 📊 Key Research Findings
+## Key Research Findings
 
 ### 1. Four-Case Hemodynamic Progression
 
@@ -91,7 +91,7 @@ When trained on Healthy and 30% cases and evaluated on an unseen 50% stenosis, t
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```text
 HemoDyn-Ai/
@@ -140,7 +140,7 @@ HemoDyn-Ai/
 
 ---
 
-## 🚀 Quickstart & Reproducibility Guide
+##  Quickstart & Reproducibility Guide
 
 ### 1. Installation
 
@@ -185,7 +185,7 @@ All 6 automated tests verify:
 
 ---
 
-## 📜 Citation
+## Citation
 
 If you use HemoDyn-AI's code, models, datasets, or CFD benchmarks in your research, please cite:
 
@@ -202,9 +202,9 @@ If you use HemoDyn-AI's code, models, datasets, or CFD benchmarks in your resear
 
 ---
 
-## 👤 Author & Affiliation
+# Author & Affiliation
 
-- **Jace Ron**
+- **Jace Roman**
 - Health Sciences / Biomedical Engineering Research
 - Temple University, Philadelphia, PA
 - Contact: [jace.roman@temple.edu](mailto:jace.roman@temple.edu)
